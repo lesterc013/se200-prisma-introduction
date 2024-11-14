@@ -8,7 +8,9 @@ export default async function Page() {
         <>
             <div>
                 {expenseItems.map((expenseItem) => (
-                    <div id={`${expenseItem.id}`}>{expenseItem.item}</div>
+                    <div id={`${expenseItem.id}`} key={expenseItem.id}>
+                        {expenseItem.item}
+                    </div>
                 ))}
             </div>
         </>
